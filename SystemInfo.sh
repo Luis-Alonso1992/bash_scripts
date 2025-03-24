@@ -1,21 +1,22 @@
 #!/bin/bash
-
-echo "========== System Information =========="
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+echo -e "${RED}========== System Information ==========${NC}"
 echo "Hostname: $(hostname)"
 echo "Uptime: $(uptime -p)"
 
 echo
-echo "========== Memory Usage =========="
+echo -e "${RED}========== Memory Usage ==========${NC}"
 free -h
 
 echo
-echo "========== Disk Usage =========="
+echo -e "${RED}========== Disk Usage ==========${NC}"
 df -hT
 
 echo
-echo "========== Network Interfaces =========="
+echo -e "${RED}========== Network Interfaces ==========${NC}"
 ip -4 addr show | grep inet
 
 echo
-echo "========== Logged-in Users =========="
+echo -e "${RED}========== Logged-in Users ==========${NC}"
 who
