@@ -1,3 +1,4 @@
 #!/bin/bash
 #Remove Password Authentication for SSH Login
-sed -i 's/#PasswordAuthentication Yes/PasswordAuthentication No/g' /etc/ssh/sshd_config
+sed -i -E 's/#PasswordAuthentication (yes|no)/PasswordAuthentication No/' /etc/ssh/sshd_cosudonfig
+sudo systemctl restart sshd
