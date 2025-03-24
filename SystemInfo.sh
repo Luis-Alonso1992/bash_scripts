@@ -1,6 +1,6 @@
 #!/bin/bash
-RED='\033[0;31m'
-NC='\033[0m' # No Color
+RED='\033[0;31m' #Sets Color to red
+NC='\033[0m' # Default color back
 echo -e "${RED}========== System Information ==========${NC}"
 echo "Hostname: $(hostname)"
 echo "Uptime: $(uptime -p)"
